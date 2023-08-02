@@ -21,6 +21,9 @@ taboolib {
     install("platform-bukkit")
     install("expansion-command-helper")
     install("expansion-alkaid-redis")
+    install("expansion-persistent-container-object")
+    relocate("com.alibaba.fastjson2","top.maplex.rayskilljob.lib.fastjson2")
+
     classifier = null
     version = "6.0.11-31"
 }
@@ -35,6 +38,7 @@ dependencies {
     compileOnly("ink.ptms.core:v11902:11902-minimize:mapped")
     compileOnly("ink.ptms.core:v11902:11902-minimize:universal")
     compileOnly("top.maplex.rayskillsystem:RaySkillSystem:2.5.1")
+    taboo("com.alibaba.fastjson2:fastjson2-kotlin:2.0.39-SNAPSHOT")
     compileOnly(kotlin("stdlib"))
     compileOnly(fileTree("libs"))
 }
