@@ -1,11 +1,14 @@
 package top.maplex.rayskilljob
 
 import com.alibaba.fastjson2.JSONObject
+import org.bukkit.entity.LivingEntity
+import org.bukkit.entity.Player
 import org.bukkit.event.player.PlayerJoinEvent
 import taboolib.common.LifeCycle
 import taboolib.common.platform.Awake
 import taboolib.common.platform.Plugin
 import taboolib.common.platform.Schedule
+import taboolib.common.platform.command.command
 import taboolib.common.platform.event.SubscribeEvent
 import taboolib.common.platform.function.info
 import taboolib.module.configuration.Config
@@ -36,7 +39,7 @@ object RaySkillJob : Plugin() {
         newConfig["测试技能"] = 1
         newConfig["猛虎下山"] = 10
         newConfig["AAAZZZ"] = 7
-        RaySkillJobTable.skillData.update(PlayerSkillData(event.player.name, event.player.uniqueId, newConfig.toJSONString()))
+        RaySkillJobTable.skillData.update(PlayerSkillData(event.player.name, event.player.uniqueId, newConfig))
         players[event.player.uniqueId] = PlayerBaseData(event.player)
     }
 

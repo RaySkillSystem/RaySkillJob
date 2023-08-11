@@ -25,7 +25,7 @@ taboolib {
     relocate("com.alibaba.fastjson2","top.maplex.rayskilljob.lib.fastjson2")
 
     classifier = null
-    version = "6.0.11-31"
+    version = "6.0.11-local"
 }
 
 repositories {
